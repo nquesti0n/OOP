@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWar", "StarWar\StarWar.csproj", "{FB82AB58-1F29-42BB-A8A6-BC28E9FCD633}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWar", "StarWar\StarWar.csproj", "{FB82AB58-1F29-42BB-A8A6-BC28E9FCD633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWar.Tests", "StarWar.Tests\StarWar.Tests.csproj", "{1331C6C9-C840-416A-BCE5-81795872AA24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FB82AB58-1F29-42BB-A8A6-BC28E9FCD633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB82AB58-1F29-42BB-A8A6-BC28E9FCD633}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB82AB58-1F29-42BB-A8A6-BC28E9FCD633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1331C6C9-C840-416A-BCE5-81795872AA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1331C6C9-C840-416A-BCE5-81795872AA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1331C6C9-C840-416A-BCE5-81795872AA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1331C6C9-C840-416A-BCE5-81795872AA24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

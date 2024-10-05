@@ -1,4 +1,4 @@
-﻿namespace StarWar
+﻿namespace StarWar.Lab01
 {
     public class Class1
     {
