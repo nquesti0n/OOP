@@ -1,4 +1,4 @@
-namespace StarWar.Tests.Lab01
+namespace StarWar.Tests
 {
     public class UnitTest1
     {
