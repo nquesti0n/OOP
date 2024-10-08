@@ -4,11 +4,8 @@ namespace StarWar.Tests
 {
     public class TurnCommandTest
     {
-        // корабль, который находится под углом к горизонту в 45 градусов 
-        // имеет угловую скорость 90 градусов. 
-        // В результате поворота корабль оказывается под углом 135 градусов к горизонту.
         [Fact]
-        public void TheGameObjectCanRotateAroundItsOwnAxis() //Игровой объект может перемещаться по прямой
+        public void TheGameObjectCanRotateAroundItsOwnAxis() 
         {
             var turnable = new Mock<ITurnable>();
 
@@ -24,7 +21,6 @@ namespace StarWar.Tests
 
             turnable.VerifyAll();
         }
-        // попытка сдвинуть корабль, у которого невозможно прочитать значение угла наклона к горизонту, приводит к ошибке.
         [Fact]
         public void TheAngleOfGameObjectCanNotBeDefined()
         {
@@ -37,7 +33,6 @@ namespace StarWar.Tests
 
             Assert.Throws<Exception>(() => turnCommand.Execute());
         }
-        // попытка сдвинуть корабль, у которого невозможно прочитать значение угловой скорости, приводит к ошибке.
         [Fact]
         public void TheDeltaAngleOfGameObjectCanNotBeDefined()
         {
@@ -50,7 +45,6 @@ namespace StarWar.Tests
 
             Assert.Throws<Exception>(() => turnCommand.Execute());
         }
-        // попытка сдвинуть корабль, у которого невозможно изменить угол наклона к горизонту, приводит к ошибке.
         [Fact]
         public void TheGameObjectCanNotRotateAroundItsOwnAxis()
         {
