@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StarWar
+namespace StarWar;
+
+public interface IQueue
 {
-    internal class Class1
-    {
-    }
+    void Add(ICommand cmd);
+    ICommand Take();
 }
