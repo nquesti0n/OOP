@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using Hwdtech;
 namespace StarWar
 {
-    internal class Class1
+    public class InterpreterCommand : Hwdtech.ICommand
     {
+        private readonly IMessage _customMessage;
+
+        public InterpreterCommand(IMessage message)
+        {
+            _customMessage = message;
+        }
+        public void Execute()
+        {
+            var cmd = IoC.Resolve<Hwdtech.ICommand>("Game.CreateCommand", _customMessage);
+
+            var id = _customMessage.GameID;
+            IoC.Resolve<Hwdtech.ICommand>("Game.Queue.Push", id, cmd).Execute();
+        }
     }
 }
