@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hwdtech;
 
-namespace StarWar
+namespace StarWar;
+
+public class EnqueueGameQueueStrategy : IStrategy
 {
-    internal class Class1
+    public object Init(params object[] args)
     {
+        var gameID = (string)args[0];
+        var command = (ICommand)args[1];
+
+        var gameQueue = IoC.Resolve<Queue<ICommand>>("Game.Queue.GetByGameID", gameID);
+
+        return new ActionCommand(() => { gameQueue.Enqueue(command); });
     }
 }

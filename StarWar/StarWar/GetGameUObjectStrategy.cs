@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hwdtech;
 
-namespace StarWar
+namespace StarWar;
+
+public class GetGameUObjectStrategy : IStrategy
 {
-    internal class Class1
+    public object Init(params object[] args)
     {
+        var gameID = (string)args[0];
+        var objectID = (int)args[1];
+
+        var objectsDictionary = IoC.Resolve<Dictionary<int, IUObject>>("Game.UObjects.GetByGameID", gameID);
+
+        return objectsDictionary[objectID];
     }
 }
